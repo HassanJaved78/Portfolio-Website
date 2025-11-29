@@ -12,7 +12,6 @@ const Portfolio = () => {
             <h1 className="heading">My Latest</h1>
 
             <div id="portfolio-container">
-
                 <div className="project-container">
                     <img src={CoffeeShop} alt="coffee shop" className="project-image" />
                     <p className="name">Coffee Shop Website</p>

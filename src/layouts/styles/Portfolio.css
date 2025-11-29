@@ -12,19 +12,23 @@
 #portfolio-container {
     margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 2.5rem;
     justify-content: space-around;
     align-items: center;
     width: 70%;
+    height: 400px;
 }
 
 .project-container {
+    display: inline-block;
     margin-top: 2rem;
     max-width: 350px;
 } 
 
 .project-image {
-    width: 100%;
+    width: 350px;
     height: 250px;
     object-fit: cover;
 }

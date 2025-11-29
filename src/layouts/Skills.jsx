@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles/Skills.css";
 
-import ReactLogo from "../assets/Apps Logo/react.svg";
+import ReactLogo from "../assets/Apps Logo/react.png";
 import FigmaIcon from "../assets/Apps Logo/figma.png";
 import NodeIcon from "../assets/Apps Logo/nodejs.png";
-import MongoIcon from "../assets/Apps Logo/mongodb.svg";
+import MongoIcon from "../assets/Apps Logo/mongodb.png";
 import JavaIcon from "../assets/Apps Logo/java.png";
 
 const Skills = () => {

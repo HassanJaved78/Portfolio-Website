@@ -29,6 +29,9 @@
 
 .inner-container {
     margin: 0.5rem 0;
+    background-color: #8080806e;
+    border-radius: 45%;
+    height: 185px;
 }
 
 .inner-container > .text {
@@ -36,9 +39,9 @@
 }
 
 .logo {
-    width: 130px;
-    height: 100px;
-    object-fit: scale-down;
+    width: 145px;
+    height: 130px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
