@@ -8,6 +8,7 @@ import Skills from '../layouts/Skills';
 import Education from '../layouts/Education';
 import Contact from "../layouts/Contact";
 import Footer from "../layouts/Footer";
+import ArrowComponent from "../components/ArrowComponent";
 
 export default function LayoutPage() {
     return (
@@ -19,6 +20,7 @@ export default function LayoutPage() {
             <Portfolio />
             <Contact />
             <Footer />
+            <ArrowComponent />
         </>
     )
 }

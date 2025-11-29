@@ -30,15 +30,10 @@ h1 {
 
 .flex-container {
     padding: 0.5rem;
-    flex: 25%;
+    flex: 20%;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
-}
-
-#center {
-    flex-grow: 3;
 }
 
 #image-wrapper {
@@ -56,11 +51,11 @@ h1 {
     border: 2px solid rgba(72, 71, 71, 0.2);
 }
 
-#left {
+#right {
     text-align: right;
 }
 
-#left .text {
+#right .text {
     font-size: 3rem;
 }
 
@@ -70,16 +65,18 @@ h1 {
     color: rgba(0, 0, 0, 0.3);
 }
 
-#right .text {
+#left .text {
     font-size: 1rem;
     line-height: 1.5rem;
+    word-wrap: break-word;
 }
 
-#right > section {
+#left > section {
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 770px) {
     #main-container {
         flex-direction: column;
     }
@@ -88,7 +85,17 @@ h1 {
         margin: 1rem 0;
     }
 
-    #left {
+    #right {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 770px) {
+    #image-wrapper > img {
+        padding: 0.5rem;
+    }
+
+    #left, #right {
+        max-width: 150px;
     }
 }

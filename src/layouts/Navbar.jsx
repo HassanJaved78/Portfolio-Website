@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import './styles/Navbar.css';
 import instagramIcon from "../assets/Social/instagram.png";
@@ -9,11 +8,11 @@ import xIcon from "../assets/Social/X.png";
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav id="nav-bar">
 
             <section id="links">
-                <NavLink to="/portfolio" >Portfolio</NavLink> 
-                <NavLink to="/" >Contact</NavLink>
+                <a href="#portfolio-section">Portfolio</a>
+                <a href="#contact-section">Contact</a>
             </section>
 
             <section id="socials">

@@ -13,7 +13,7 @@ const Intro = () => {
             </div>
             
             <div id="main-container">
-                <div id="right" className="flex-container">
+                <div id="left" className="flex-container">
                     <section>
                         <h3 className="headings">Education</h3>
                         <p className="text">Work for money and design for love!</p>
@@ -41,7 +41,7 @@ const Intro = () => {
                 </div>
 
 
-                <div id="left" className="flex-container">
+                <div id="right" className="flex-container">
                     <section>
                         <h3 className="headings">Years of experience</h3>
                         <p className="text">1</p>

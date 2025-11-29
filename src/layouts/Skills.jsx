@@ -51,6 +51,7 @@ const Skills = () => {
                     </div>
                     <p className="name">Java</p>
                 </div>
+
             </div>
         </div>
     )
