@@ -1,0 +1,32 @@
+#education-section {
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    margin-top: 3rem;
+}
+
+#education-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.time-heading, .place {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}

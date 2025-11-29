@@ -1,0 +1,27 @@
+nav{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    height: 4rem;
+}
+
+#links {
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#links > a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+#socials > a > img {
+    margin: 0 0.5rem;
+}
