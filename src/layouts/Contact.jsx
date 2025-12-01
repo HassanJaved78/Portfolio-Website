@@ -12,6 +12,44 @@ export default function() {
         message: ''
     });
 
+    const [error, setError] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    function validateField(name, value) {
+        let error = "";
+
+        if(!value) {
+            error = `${name} is required`;
+        }
+        else {
+            if (name === "email") {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    error = 'Invalid email address';
+                }
+            }
+        }
+
+        if(name === "subject" || name === "message") {
+            if(value.trim().length < 20) {
+                error = `${name} must have atleast 20 characters`;
+            }
+            
+        }
+
+        setError(prevError => ({
+            ...prevError,
+            [name] : error
+        }))
+
+        // console.log(error);
+    }
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         
@@ -20,7 +58,9 @@ export default function() {
             [name]: value,
         }))
 
-        console.log(user);
+        // console.log(user);
+
+        validateField(name, value);
     }
 
     const clearForm = () => {
@@ -35,6 +75,18 @@ export default function() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        let formIsValid = true;
+        Object.keys(user).forEach(key => {
+            validateField(key, user[key]);
+
+            if (!user[key] || error[key]){
+                formIsValid = false;
+            }
+        })
+
+        if(!formIsValid) return;
+
         alert("Response Submitted");
         clearForm();
     }
@@ -51,23 +103,39 @@ export default function() {
                         
                         <form onSubmit={handleSubmit}>
 
-                            <input type="text" name="firstName" id="firstName" placeholder="First Name" value={user.firstName} onChange={handleChange} required />
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" value={user.firstName} onChange={handleChange}  />
 
-                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" value={user.lastName} onChange={handleChange} required />
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" value={user.lastName} onChange={handleChange}  />
+                            {error.firstName &&
+                                <p className="error">{error.firstName}</p>
+                            }
+                            
+                            {error.lastName &&
+                                <p id="lastname-error" className="error">{error.lastName}</p>
+                            }
 
                             {/* <label htmlFor="email">Email</label> */}
-                            <input type="email" value={user.email} name="email" id="email" placeholder="Enter your email" onChange={handleChange} required />
+                            <input type="email" value={user.email} name="email" id="email" placeholder="Enter your email" onChange={handleChange}  />
+                            {error.email &&
+                                <p className="error">{error.email}</p>
+                            }
 
                             {/* <label htmlFor="subject">Subject</label> */}
-                            <input type="text" value={user.subject} name="subject" id="subject" placeholder="What you have to say?" onChange={handleChange} required />
-
+                            <input type="text" value={user.subject} name="subject" id="subject" placeholder="What you have to say?" onChange={handleChange}  />
+                            {error.subject &&
+                                <p className="error">{error.subject}</p>
+                            }
+                            
                             {/* <label htmlFor="message">Your Message</label> */}
-                            <textarea type="textarea" value={user.message} name="message" id="message" placeholder="Enter your message" onChange={handleChange} rows={4} required> </textarea>
+                            <textarea type="textarea" value={user.message} name="message" id="message" placeholder="Enter your message" onChange={handleChange} rows={4} > </textarea>
+                            {error.message &&
+                                <p className="error">{error.message}</p>
+                            }
 
                             {/* <label htmlFor="file">Attachment</label> */}
                             <input type="file" name="file" id="file" />
 
-                            <button type="submit" disabled={!user.firstName || !user.lastName || !user.email || !user.subject || !user.message}>Submit</button>
+                            <button type="submit">Submit</button>
                         </form>
 
                     </div>

@@ -10,7 +10,6 @@
 }
 
 #portfolio-container {
-    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -23,7 +22,7 @@
 
 .project-container {
     display: inline-block;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     max-width: 350px;
 } 
 

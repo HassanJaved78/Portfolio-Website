@@ -45,7 +45,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1080px) {
     #skill-container {
         justify-content: center;
     }

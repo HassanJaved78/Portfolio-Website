@@ -1,6 +1,6 @@
-#contact-section {
+/* #contact-section {
     border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-}
+} */
 
 #contact-container {
     padding: 3rem 1rem;
@@ -65,14 +65,14 @@ label, input, textarea {
     float: right;
 }
 
-label {
+/* label {
     margin-bottom: 5px;
     display: none;
-}
+} */
 
 input:not(:last-of-type), textarea {
     padding: 5px;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     border: none;
     border-bottom: 1px solid rgba(128, 128, 128, 0.555);
     line-height: 1.5rem;
@@ -169,4 +169,16 @@ button:disabled {
 
 h1 {
     color: #ED1F24;
+}
+
+.error {
+    color: red;
+    font-size: 0.85rem;
+    display: inline-block;
+    text-indent: 0.5rem;
+}
+
+#lastname-error {
+    width: 45%;
+    float: right;
 }

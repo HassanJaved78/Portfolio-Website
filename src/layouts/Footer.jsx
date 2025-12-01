@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
         
             <div id="footer-bottom">
-                <span>Created By Hassan Javed</span>
+                <span>Created By <b>Hassan Javed</b></span>
 
                 <span id="links-span">
                     <div className="links">
