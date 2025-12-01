@@ -9,6 +9,12 @@
     width: 100%;
     margin: 0 auto;
     padding-bottom: 0;
+    background-color: #ED1F24;
+    /* color: white; */
+}
+
+#footer-section > h1 {
+    color: black;
 }
 
 #footer-links {
@@ -72,7 +78,8 @@ hr{
     #footer-links > a {
         width: 100%;
         text-align: center;
-        margin: 0.2rem 0;
+        margin: 0.4rem 0;
+        padding: 0.2rem 0;
     }
 
     .dash{

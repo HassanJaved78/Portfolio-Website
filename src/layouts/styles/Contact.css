@@ -1,20 +1,46 @@
 #contact-section {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+#contact-container {
     padding: 3rem 1rem;
     margin: 0 auto;
     min-height: 300px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    gap: 1rem;
+    width: 70%;
 }
 
-#contact-container {
+#left-contact, #right-contact {
+    flex:49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#left-contact {
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#right-contact {
+    padding: 1.5rem;
+    /* flex: 30%; */
+}
+
+#right-contact > p{
+    text-align: justify;
+}
+
+#form-container {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 70%;
+    width: 85%;
 }
 
 .heading {
@@ -24,29 +50,123 @@
 form {
     max-width: 700px;
     margin: 1rem auto;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
-label, input {
+label, input, textarea {
     width: 100%;
+}
+
+#firstName, #lastName {
+    width: 45%;
+}
+
+#lastName {
+    float: right;
 }
 
 label {
     margin-bottom: 5px;
+    display: none;
 }
 
-input {
+input:not(:last-of-type), textarea {
     padding: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.555);
+    line-height: 1.5rem;
+}
+
+input:focus:not(:last-of-type), textarea:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 0.5rem;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px; /* Space between the button and the file name text */
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #007bffcd;
 }
 
 button {
     padding: 5px;
     min-width: 200px;
     display: block;
-    margin: 0 auto;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    background-color: #ED1F24;
+    color: white;
+    border: #ED1F24;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #ed1f22a4;
+}
+
+button:disabled {
+    background-color: grey;
+}
+
+@media screen and (max-width: 1300px) {
+    #left-contact {
+        flex: 60%;
+    }
+
+    #right-contact {
+        flex: 35%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #left-contact {
+        flex: 55%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #left-contact {
+        flex: 52%;
+    }
+
+    #right-contact {
+        flex: 20%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    #left-contact {
+        border: none;
+    }
+    #contact-container {
+        flex-direction: column-reverse;
+    }
+
+    #right-contact > h1{
+        text-align: center;
+    }
+
+}
+
+h1 {
+    color: #ED1F24;
 }

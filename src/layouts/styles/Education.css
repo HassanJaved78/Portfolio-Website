@@ -10,7 +10,20 @@
 }
 
 .section {
+    position: relative;
     margin-top: 3rem;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 1px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 
 #education-container {
@@ -21,7 +34,7 @@
 }
 
 .time-heading, .place {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .name {
@@ -29,4 +42,10 @@
     font-weight: bold;
     line-height: 1.5rem;
     font-size: 1.2rem;
+}
+
+#education-container .name::before, .place::before {
+    content: "";
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-right: 0.25rem;
 }

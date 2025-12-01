@@ -17,7 +17,7 @@ const Navbar = () => {
 
             <section id="socials">
                 <a href="https://instagram.com" target="_blank">
-                <img src={instagramIcon} alt="instagram"/>
+                    <img src={instagramIcon} alt="instagram"/>
                 </a>
 
                 <a href="https://github.com"  target="_blank">
